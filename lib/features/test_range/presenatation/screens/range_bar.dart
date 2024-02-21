@@ -45,14 +45,14 @@ class NumberHighlightPainter extends CustomPainter {
     const textStyle = TextStyle(
         color: Indra.black, fontSize: 12, fontWeight: FontWeight.w500);
 
-    final double widthPerUnitRange = (size.width - 10) / testMetaData.maxRange;
+    final widthPerUnitRange = (size.width - 10) / testMetaData.maxRange;
 
     for (final test in testMetaData.tests) {
-      final double startRange = widthPerUnitRange * test.minRange;
-      final double endRange = widthPerUnitRange * test.maxRange;
+      final startRange = widthPerUnitRange * test.minRange;
+      final endRange = widthPerUnitRange * test.maxRange;
 
-      const double barHeight = 20;
-      final double barWidth = (endRange - startRange);
+      const barHeight = 20.0;
+      final barWidth = (endRange - startRange);
 
       // DRAW RANGE-BAR
       final paint = Paint()
@@ -96,10 +96,10 @@ class NumberHighlightPainter extends CustomPainter {
         textDirection: TextDirection.ltr,
       );
       numberPainter.layout();
-      final double numberWidth = numberPainter.width;
+      final numberWidth = numberPainter.width;
 
       // DRAW LINE POINTING TO RANGE BAR
-      final Paint linePaint = Paint()
+      final linePaint = Paint()
         ..color = Colors.black
         ..strokeWidth = 1.0;
       canvas.drawLine(Offset(dx, dy), Offset(dx, 15), linePaint);
