@@ -87,7 +87,7 @@ class NumberHighlightPainter extends CustomPainter {
     if (highlightedNumber >= 0 && highlightedNumber <= 120) {
       const dy = 30.0;
       final dx =
-          (widthPerUnitRange * highlightedNumber) + (widthPerUnitRange / 2);
+          (widthPerUnitRange * highlightedNumber) + (widthPerUnitRange / 4);
 
       final numberPainter = TextPainter(
         text: TextSpan(

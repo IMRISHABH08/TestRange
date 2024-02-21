@@ -12,6 +12,7 @@ class TestRangeUsecaseImpl implements TestRangeUsecase {
 
   @override
   TestResultData? getResultMetaData() {
+    maxRange = 120;
     final testTypes = [
       const Test(
           minRange: minRange, maxRange: 30, resultType: TestResult.dangerous),
@@ -20,6 +21,6 @@ class TestRangeUsecaseImpl implements TestRangeUsecase {
       const Test(minRange: 60, maxRange: 70, resultType: TestResult.moderate),
       Test(minRange: 70, maxRange: maxRange, resultType: TestResult.dangerous),
     ];
-    return TestResultData(maxRange: 120, tests: testTypes);
+    return TestResultData(maxRange: maxRange, tests: testTypes);
   }
 }

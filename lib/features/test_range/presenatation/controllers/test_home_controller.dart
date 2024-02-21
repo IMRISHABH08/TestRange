@@ -40,5 +40,6 @@ class TestHomeController {
   void dispose() {
     testMetadata.close();
     validationMsg.close();
+    searchedScore.close();
   }
 }
